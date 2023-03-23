@@ -1,3 +1,9 @@
+# Dependencies
+
+- Cpanel
+- Centos
+- Node 16
+
 # How to use
 
 In order to use this script, follow these simple steps:
