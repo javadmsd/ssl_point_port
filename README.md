@@ -29,3 +29,28 @@ In order to use this script, follow these simple steps:
 8. Type `:wq` and press `Enter` to save the changes.
 
 Now the script is ready to be used.
+
+---
+
+## Apache configuration
+
+`pre_virtualhost_global.conf`
+
+### Sample
+
+```
+<VirtualHost example.com:80>
+        ServerName example.com
+        Redirect / https://example.com/
+</VirtualHost>
+
+<VirtualHost example.com:443>
+    ServerName example.com
+    SSLEngine on
+    SSLCertificateFile /home/example/ssl/certs/_example.com_db26....crt
+    SSLCertificateKeyFile /home/example/ssl/keys/db2....key
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:3000/
+    ProxyPassReverse / http://localhost:3000/
+</VirtualHost>
+```
