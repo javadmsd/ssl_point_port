@@ -1,3 +1,5 @@
+This Node.js script automates updating SSL certificates for multiple virtual hosts on an Apache web server. After AutoSSL runs in cPanel, this script updates new SSL file paths in virtual host configuration by reading the configuration information which includes file paths for SSL certificates, hosting files, and virtual host configuration, and compares it against an SSL database file for the server.
+
 # Dependencies
 
 - Cpanel
