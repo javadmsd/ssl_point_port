@@ -20,21 +20,23 @@ git clone https://github.com/javadmsd/ssl_point_port.git
 
 3. Type `npm i` in the terminal to install the necessary dependencies.
 
-4. Open the `script.sh` and `fixer.js` files and change any instance of `{{USER}}` to the user's account.
+4. Type chmod +x script.sh in the terminal and press enter. This will make the script executable.
 
-5. Use the command `crontab -e` to open the cron jobs.
+5. Open the `script.sh` and `fixer.js` files and change any instance of `{{USER}}` to the user's account.
 
-6. Press `i` on the keyboard to insert a new line.
+6. Use the command `crontab -e` to open the cron jobs.
 
-7. Type the following line and replace `{{USER}}` with the user's account name:
+7. Press `i` on the keyboard to insert a new line.
+
+8. Type the following line and replace `{{USER}}` with the user's account name:
 
 ```
 */30 * * * * /home/{{USER}}/ssl_point_port/script.sh >> /home/{{USER}}/ssl_point_port/history.log 2>&1
 ```
 
-8. Press `Esc`.
+9. Press `Esc`.
 
-9. Type `:wq` and press `Enter` to save the changes.
+10. Type `:wq` and press `Enter` to save the changes.
 
 Now the script is ready to be used.
 
