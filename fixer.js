@@ -55,7 +55,7 @@ const getCertificate = (domain, sslData, hostData) => {
   const certData =
     hostData?.data?.hosts.find((host) => host.servername === domain) || null;
 
-  if (certData.certificate) {
+  if (certData?.certificate) {
     const cartFileName = certData.certificate.id;
 
     const keyFileName =
