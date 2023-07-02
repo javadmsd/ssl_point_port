@@ -22,7 +22,7 @@ git clone https://github.com/javadmsd/ssl_point_port.git
 
 3. Type `npm i` in the terminal to install the necessary dependencies.
 
-4. Type chmod +x script.sh in the terminal and press enter. This will make the script executable.
+4. Type chmod +x `script.sh` and chmod +x `certbot_renew.sh` in the terminal and press enter. This will make the script executable.
 
 5. Open the `script.sh` and `fixer.js` files and change any instance of `{{USER}}` to the user's account.
 
@@ -34,6 +34,7 @@ git clone https://github.com/javadmsd/ssl_point_port.git
 
 ```
 */30 * * * * /home/{{USER}}/ssl_point_port/script.sh >> /home/{{USER}}/ssl_point_port/history.log 2>&1
+*/15 * * * * /home/{{USER}}/ssl_point_port/certbot_renew.sh >> /home/{{USER}}/ssl_point_port/history_certbot.log 2>&1
 ```
 
 9. Press `Esc`.
